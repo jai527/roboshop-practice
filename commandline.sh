@@ -14,4 +14,5 @@ echo ${10}
 echo ${11}
 echo $@
 echo $*
+echo $?
 echo ${12}
