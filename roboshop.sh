@@ -31,5 +31,4 @@ do
          --output text
         )
     fi
-
-    Done
+Done
