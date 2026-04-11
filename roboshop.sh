@@ -53,8 +53,7 @@ if [$instance == frontend];then
             }
         ]
     }'
-            
-echo "Instance $instance created with IP: $ip and DNS: $instance.roboshop.internal"
+        
 
 done
 
