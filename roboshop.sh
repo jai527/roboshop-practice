@@ -36,23 +36,24 @@ if [$instance == frontend];then
 
     aws route53 change-resource-record-sets \
     --hosted-zone-id Z0347369KZ7QG8X5B
-    --change-batch '{
-        "Changes": [
+    --change-batch '
+    {
+        Changes": [
             {
-                "Action": "UPSERT",
-                "ResourceRecordSet": {
-                    "Name": "'$instance.roboshop.internal'",
-                    "Type": "A",
-                    "TTL": 1    ,
-                    "ResourceRecords": [
-                        {
-                            "Value": "'$ip'"
-                        }
-                    ]
+            "Action": "UPSERT",
+            "ResourceRecordSet": {
+               "Name": "'$instance.roboshop.internal'",
+               "Type": "A",
+               "TTL": 1    ,
+               "ResourceRecords": [
+                {
+                    "Value": "'$ip'"
+                }
+                ]
                 }
             }
         ]
-    }'
+    }
         
 
 done
