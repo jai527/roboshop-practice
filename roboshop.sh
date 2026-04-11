@@ -55,6 +55,7 @@ if [$instance == frontend];then
             }
         ]
     }
+    '
         
 
 done
