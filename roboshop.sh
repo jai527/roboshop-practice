@@ -3,6 +3,8 @@
 SG_ID="sg-02677d7f13c97966d"
 AMI_ID="ami-0220d79f3f480ecf5"
 INSTANCE_TYPE="t3.micro"
+ZONE_ID="Z005336437MHJ16KCQQI8"
+DOMAIN="jai01.online"
 #KEY_NAME="roboshop"
 #TAG="roboshop"
 
@@ -35,9 +37,10 @@ if [$instance == frontend];then
     echo "IP Address: $ip"
 
     aws route53 change-resource-record-sets \
-    --hosted-zone-id Z0347369KZ7QG8X5B
+    --hosted-zone-id $ZONE_ID
     --change-batch '
     {
+        comment": update a record for 
         Changes": [
             {
             "Action": "UPSERT",
