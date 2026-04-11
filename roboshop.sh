@@ -14,32 +14,32 @@ do
   --output text)
 
 if [$instance == frontend];then
-    ip=$(
+    IP=$(
         aws ec2 describe-instances   
         instance-ids $instance_id \
         --query 'Reservations[].Instances[].PublicIpAddress' \
         --output text 
     )
 
-    record_name="$Domain_Name"
+    Record_Name="$Domain_Name"
     else
-    ip=$(
+    IP=$(
         aws ec2 describe-instances   
         instance-ids $instance_id \
         --query 'Reservations[].Instances[].PrivateIpAddress' \
         --output text
     )
-    record_name="$instance.$Domain_Name"
+    Record_Name="$instance.$Domain_Name"
     fi
 
-    echo "IP Address: $ip"
+    echo "IP Address: $IP"
 
     aws route53 change-resource-record-sets \
     --hosted-zone-id $ZONE_ID
     --change-batch '
     {
-        comment": update a record for 
-        Changes": [
+        "comment": update a record for 
+        "Changes": [
             {
             "Action": "UPSERT",
             "ResourceRecordSet": {
@@ -48,9 +48,10 @@ if [$instance == frontend];then
                "TTL": 1    ,
                "ResourceRecords": [
                 {
-                    "Value": "'$ip'"
+                    "Value": "'$IP'"
                 }
                 ]
+            }
             }
         ]
     }
