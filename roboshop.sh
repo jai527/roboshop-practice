@@ -15,13 +15,12 @@ do
    --query 'Instances[0].InstanceId' \
    --output text )
 
-   if [ $instance == frontend ]; then
+    if [ $instance == frontend ]; then
        IP=$(
         aws ec2 describe-instances \  
         instance-ids $Instance_ID \
         --query 'Reservations[].Instances[].PublicIpAddress' \
         --output text)
-    Record_Name="$Domain_Name"
     else
        IP=$(
          aws ec2 describe-instances \      
@@ -30,5 +29,5 @@ do
          --output text
     )
     fi
-    
+
     Done
