@@ -30,6 +30,7 @@ do
          --output text
     )
     Record_Name="$instance.$Domain_Name"
+
     fi
 
     echo "IP Address: $IP"
@@ -38,12 +39,12 @@ do
     --hosted-zone-id $ZONE_ID \
     --change-batch '
     {
-        "comment": "update a record for",
+        "comment": "update a record",
         "Changes": [
             {
             "Action": "UPSERT",
             "ResourceRecordSet": {
-               "Name": "'Record_Name'",
+               "Name": "'$Record_Name'",
                "Type": "A",
                "TTL": 1    ,
                "ResourceRecords": [
