@@ -8,7 +8,7 @@ INSTANCE_TYPE="t3.micro"
 
 for instance in $@
 do
-   Instance_ID=$( aws ec2 run-instances \
+   INSTANCE_ID=$( aws ec2 run-instances \
    --image-id $AMI_ID \
    --instance-type $INSTANCE_TYPE \
    --security-group-ids $SG_ID \
@@ -19,14 +19,14 @@ do
     if [ $instance == "frontend" ]; then
             IP=$(
             aws ec2 describe-instances \  
-            instance-ids $Instance_ID \
+            instance-ids $INSTANCE_ID \
             --query 'Reservations[].Instances[].PublicIpAddress' \
             --output text
         )
     else
             IP=$(
             aws ec2 describe-instances \      
-            instance-ids $Instance_ID \
+            instance-ids $INSTANCE_ID \
             --query 'Reservations[].Instances[].PrivateIpAddress' \
             --output text
         )
