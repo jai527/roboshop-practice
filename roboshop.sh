@@ -29,8 +29,6 @@ do
          --query 'Reservations[].Instances[].PrivateIpAddress' \
          --output text
     )
-    Record_Name="$instance.$Domain_Name"
-
     fi
 
     echo "IP Address: $IP"
