@@ -7,15 +7,15 @@ DOMAIN="jai01.online"
 
 for instance in $@
 do
-   Instance_ID=$(aws ec2 run-instances \
+   Instance_ID=$( aws ec2 run-instances \
    --image-id $AMI_ID \
    --instance-type $INSTANCE_TYPE \
    --security-group-ids $SG_ID \
-   --tag-specifications \"ResourceType=instance,Tags=[{Key=Name,Value=$TAG-$instance}]" 
+   --tag-specifications \"ResourceType=instance,Tags=[{Key=Name,Value=$TAG-$instance}]" \
    --query 'Instances[0].InstanceId' \
-   --output text)
+   --output text )
 
-   if [$instance == frontend]; then
+   if [ $instance == frontend ]; then
        IP=$(
         aws ec2 describe-instances \  
         instance-ids $Instance_ID \
@@ -57,6 +57,6 @@ do
         ]
     }
     '
-        
+        echo "record updated for $instance"
 
 done
