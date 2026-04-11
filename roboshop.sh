@@ -1,13 +1,9 @@
 #!/bin/bash
-
 SG_ID="sg-02677d7f13c97966d"
 AMI_ID="ami-0220d79f3f480ecf5"
 INSTANCE_TYPE="t3.micro"
 ZONE_ID="Z005336437MHJ16KCQQI8"
 DOMAIN="jai01.online"
-#KEY_NAME="roboshop"
-#TAG="roboshop"
-
 for instance in $@
 do
   $(aws ec2 run-instances --image-id $AMI_ID \
