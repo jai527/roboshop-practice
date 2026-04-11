@@ -1,4 +1,5 @@
 #!/bin/bash
+
 SG_ID="sg-02677d7f13c97966d"
 AMI_ID="ami-0220d79f3f480ecf5"
 INSTANCE_TYPE="t3.micro"
@@ -15,19 +16,20 @@ do
    --query 'Instances[0].InstanceId' \
    --output text )
 
-    if [ $instance == frontend ]; then
-       IP=$(
+    if [ $instance == "frontend" ]; then
+        IP=$(
         aws ec2 describe-instances \  
         instance-ids $Instance_ID \
         --query 'Reservations[].Instances[].PublicIpAddress' \
-        --output text)
+        --output text
+        )
     else
        IP=$(
          aws ec2 describe-instances \      
          instance-ids $Instance_ID \
          --query 'Reservations[].Instances[].PrivateIpAddress' \
          --output text
-    )
+        )
     fi
 
     Done
