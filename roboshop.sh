@@ -22,8 +22,10 @@ if [$instance == frontend];then
         aws ec2 describe-instances   
         instance-ids $instance_id \
         --query 'Reservations[].Instances[].PublicIpAddress' \
-        --output text
+        --output text 
     )
+
+    record_name="$Domain_Name"
     else
     ip=$(
         aws ec2 describe-instances   
@@ -31,7 +33,7 @@ if [$instance == frontend];then
         --query 'Reservations[].Instances[].PrivateIpAddress' \
         --output text
     )
-
+    record_name="$instance.$Domain_Name"
     fi
 
     echo "IP Address: $ip"
@@ -45,7 +47,7 @@ if [$instance == frontend];then
             {
             "Action": "UPSERT",
             "ResourceRecordSet": {
-               "Name": "'$instance.roboshop.internal'",
+               "Name": "'Record_Name'",
                "Type": "A",
                "TTL": 1    ,
                "ResourceRecords": [
@@ -53,11 +55,9 @@ if [$instance == frontend];then
                     "Value": "'$ip'"
                 }
                 ]
-                }
             }
         ]
     }
         
 
 done
-
