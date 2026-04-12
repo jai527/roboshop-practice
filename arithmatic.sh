@@ -14,7 +14,7 @@ echo "number + c = $((number + c))"
    echo "a is eqal to b"
 fi
  if ($b -gt $a); then 
- echo"b is greater then b"
+ echo "b is greater then b"
  fi
   if ($c -lt $b); then
     echo "c is less then b"
