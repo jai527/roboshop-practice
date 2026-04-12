@@ -11,7 +11,7 @@ echo "a ** 2 = $((a ** 2))"
 read -p "Enter a number: " number
 echo "number + c = $((number + c))"
  if [ $a -eq $b ]; then
-   echo "a is eqal to b"
+   echo "a is equal to b"
 fi
  if [ $b -gt $a ]; then 
  echo "b is greater then b"
