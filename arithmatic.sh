@@ -3,7 +3,7 @@ b=26
 c=30
 echo "arithatic operations"
 
-if [ $a -eq $b ] && [ $b -eq $a ]; then
+if [ $a -eq 10 ] && [ $b -eq 26 ]; then
 
     echo "aleast one condition is true"
 fi
