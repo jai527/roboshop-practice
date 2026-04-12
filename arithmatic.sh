@@ -2,7 +2,7 @@ a=10
 b=26
 c=30
 
-#{echo "additional valve is a : a + b = $((a + b))"
+echo "additional valve is a : a + b = $((a + b))"
 echo "a - b = $((a - b))"
 echo "a * b = $((a * b))"
 echo "a / b = $((a / b))"
@@ -16,11 +16,9 @@ fi
  if [ $b -gt $a ]; then 
  echo "b is greater then b"
  fi
-  if [ $c -lt $b ]; then
+if [ $c -lt $b ]; then
     echo "c is less then b"
-fi}#
-
-
+fi
 if [ $a -eq $b ] && [ $b -eq $a ]; then
 
     echo "aleast one condition is true"
