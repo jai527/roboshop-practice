@@ -2,7 +2,7 @@ a=10
 b=26
 c=30
 
-echo "additional valve is a + b = $((a + b))"
+echo "additional valve is a : a + b = $((a + b))"
 echo "a - b = $((a - b))"
 echo "a * b = $((a * b))"
 echo "a / b = $((a / b))"
