@@ -11,7 +11,7 @@ fi
 if [ $c -lt 40 ] && [ $b -lt 20 ]; then
    
    echo "atlest one condtions is ture"
-fi
  else
+  echo "one condition is false"
+  fi
   
-   echo "one condition is false"
