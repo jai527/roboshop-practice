@@ -5,7 +5,4 @@ echo "addition of two valves $sum"
 product=$(($a * $b))
 echo "multiplie two valves $product"
 
-for((i=1; i<=5; i++))
-do
- echo "interation: $i"
-done
+
