@@ -1,7 +1,7 @@
 #a=10
 #b=200
 echo "please enter the valve a "
-read=$( "enter the valve [ "$a & $b" ]" )
+read p $a
 
 sum=$(($a + $b))
 echo "addition of two valves $sum"
