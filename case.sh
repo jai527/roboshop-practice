@@ -3,10 +3,10 @@
 day="sunday"
 
 case $day in 
-   monday | tuesaday | wensday | sunday) 
+   monday | tuesday | wensday | sunday) 
     echo "the $day is weekend"
     ;;
-    saturady | sunday
+    monday | tuesday
     echo "$day is weekend"
     ;;
 esac
