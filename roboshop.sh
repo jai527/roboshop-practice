@@ -7,7 +7,6 @@ for instance in $@
 do
     Instance_Id=$(aws ec2 run-instances \
     --image-id $AMI_ID \
-    --count 1 \
     --instance-type t3.micro \
     --security-group-ids $SG_ID \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=instance}]" \
@@ -15,18 +14,19 @@ do
     --output.txt)
 
     if [ $instance == "frontend" ]; then
-       IP=$
-       (aws ec2 describe-instances \
+       IP=$(
+       aws ec2 describe-instances \
        --instance-ids $Instance_Id \
        --query "Reservations[].Instances[].PublicIpAddress" \
        --output text)
     else
        [ $instance == "frontend" ]; then
-       IP=$
-       (aws ec2 describe-instances \
+       IP=$(
+       aws ec2 describe-instances \
        --instance-ids $Instance_Id \
        --query "Reservations[].Instances[].PrivateIpAddress" \
-       --output text)
-    fi
+       --output text
+    )
+fi
        
 done
