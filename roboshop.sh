@@ -11,24 +11,26 @@ do
     --security-group-ids $SG_ID \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=instance}]" \
     --query 'Instances[0].InstanceId' \
-    --output.txt)
+    --output.txt )
 
     if [ $instance == "frontend" ]; then
        IP=$(
        aws ec2 describe-instances \
        --instance-ids $Instance_Id \
-       --query "Reservations[].Instances[].PublicIpAddress" \
+       --query 'Reservations[].Instances[].PublicIpAddress' \
        --output text
     )
     else
        IP=$(
        aws ec2 describe-instances \
        --instance-ids $Instance_Id \
-       --query "Reservations[].Instances[].PrivateIpAddress" \
-       --output text
-    )
-fi
+       --query 'Reservations[].Instances[].PrivateIpAddress' \
+       --output text 
+       )
+
+    fi
 
 
-echo "IP Address"
+
+    echo "IP Address"
 done
