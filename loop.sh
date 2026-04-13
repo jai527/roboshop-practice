@@ -2,6 +2,6 @@
 
 for arg is "$@"
 do
-   echo "$@"
+   echo "$arg"
 
 done
