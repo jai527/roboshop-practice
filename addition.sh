@@ -1,6 +1,6 @@
 a=10
 b=200
-echo "please enter the valve"
+echo "please enter the valve $a $b"
 read p enter the valve
 
 sum=$(($a + $b))
