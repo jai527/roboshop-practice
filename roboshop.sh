@@ -20,7 +20,7 @@ do
        --query "Reservations[].Instances[].PublicIpAddress" \
        --output text)
     else
-       [ $instance == "frontend" ]; then
+       [$instance == "frontend"]; then
        IP=$(
        aws ec2 describe-instances \
        --instance-ids $Instance_Id \
