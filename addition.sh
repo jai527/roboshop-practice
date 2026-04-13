@@ -5,5 +5,5 @@ sum=$(($a + $b))
 echo "addition of two valves $sum"
 product=$(($a * $b))
 echo "multiplie two valves $product"
-increment=$(($a ++ $b))
+increment=$(($a -- $b))
 echo "increment% $increment"
