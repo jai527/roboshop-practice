@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for arg in "$@"
+for arg is "$@"
 do
    echo "$arg"
 
