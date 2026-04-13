@@ -11,5 +11,5 @@ case $day1 in
    sunday  | saturday)
     echo "$day1 is sunday"
     ;;
-    *)
+    
 esac
