@@ -9,4 +9,5 @@ case $day in
     monday | tuesday)
     echo "$day is weekday"
     ;;
+    *)
 esac
