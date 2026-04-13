@@ -9,8 +9,8 @@ do
     --image-id $AMI_ID \
     --count 1 \
     --instance-type t3.micro \
-    #--key-name MyKeyPair \
     --security-group-ids $SG_ID \
-    --query 'Instances[0].PrivateIpAddress' \
     --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=MyInstance}]"
+    --query 'Instances[0].Reservation[0].PrivateIpAddress' \
+    --output.txt 
 done    
