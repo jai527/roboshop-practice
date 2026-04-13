@@ -19,7 +19,7 @@ do
             --instance-ids $Instance_Id \
             --query 'Reservations[].Instances[].PublicIpAddress' \
             --output text
-    )
+        )
     else
        IP=$(
             aws ec2 describe-instances \
@@ -29,8 +29,5 @@ do
         )
 
     fi
-
-
-
     echo "IP Address"
 done
