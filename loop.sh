@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for arg is $@
+for arg is "$@"
 do
-   echo $@
+   echo "$@"
 
 done
