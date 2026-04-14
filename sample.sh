@@ -19,7 +19,7 @@ echo  "enter seconds"
 read s
 total_seconds=$((h * 3600 + m * 60 + s))
 
-echo "total seconds: $total_seconds"}#
+echo "total seconds: $total_seconds"
 
 #hypotenuse finder
 
