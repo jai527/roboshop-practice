@@ -25,4 +25,4 @@ unset name_array[1]
 for element in "${name_array[@]}"
 do 
   echo "$element"
-fi
+done
