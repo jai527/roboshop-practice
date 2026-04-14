@@ -10,6 +10,6 @@ h=$1
 m=$2
 s=$3
 
-TS=$=$((h * 3600 + m * 60 + s))
+TS=$((h * 3600 + m * 60 + s))
 
 echo "enter the valve: $TS"
