@@ -14,3 +14,8 @@ array_name+=("jaswanth")
 echo "${array_name[8]}"
 
 echo "all are family members and joint family"
+
+#Length of array
+
+name_array=("jai" "kumar" "jai1")
+echo "length of array: ${name_array[@]"  #prient the number of elements in the array
