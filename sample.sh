@@ -9,5 +9,14 @@ echo "calculating the valve "
 total_valve=$((p * r * t /100))
 echo "simple intrest rate: $total_valve"
 
-echo  "calculate the total seconds give hours inutes and second"
-read p
+#Total Seconds = (hours × 3600) + (minutes × 60) + seconds 
+
+echo "enter hours"
+read h
+echo "enter minutes"
+read m
+echo  "enter seconds"
+read s
+total_seconds=$((h * 3600 + m * 60 + s))
+
+echo "total seconds: $total_seconds"
