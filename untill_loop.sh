@@ -6,7 +6,7 @@ echo "counting up":
 untill [$counter -gt 0] 
 do 
    echo "$conter"
-    (( conter++ ))
+    (( counter++ ))
 
 done
   echo "conting is done"
