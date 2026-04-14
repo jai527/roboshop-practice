@@ -13,3 +13,9 @@ s=$3
 TS=$((h * 3600 + m * 60 + s))
 
 echo "enter the valve: $TS"
+
+name=$1
+name=$2
+name=$3
+
+echo "please geve me family members name $1 $2 $3"
