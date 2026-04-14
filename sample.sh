@@ -1,5 +1,5 @@
-
-echo "please enter principle valve"
+#!/bin/bash
+#{echo "please enter principle valve"
 read p
 echo "please enter rate valve"
 read r
@@ -19,7 +19,7 @@ echo  "enter seconds"
 read s
 total_seconds=$((h * 3600 + m * 60 + s))
 
-echo "total seconds: $total_seconds"
+echo "total seconds: $total_seconds"}#
 
 #hypotenuse finder
 
