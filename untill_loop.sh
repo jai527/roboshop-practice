@@ -2,7 +2,7 @@
 
 counter=1
 echo "counting up":
-until [ $counter -gt 0 ] 
+until [ $counter -gt 10 ] 
 do 
    echo "$conter"
     (( counter++ ))
