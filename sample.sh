@@ -8,3 +8,6 @@ read t
 echo "calculating the valve "
 total_valve=$((p * r * t /100))
 echo "simple intrest rate: $total_valve"
+
+echo  "calculate the total seconds give hours inutes and second"
+read p
