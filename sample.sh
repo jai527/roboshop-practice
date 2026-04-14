@@ -1,6 +1,6 @@
 #!/bin/bash
-#echo "please enter principle valve"
-#{read p
+echo "please enter principle valve"
+read p
 echo "please enter rate valve"
 read r
 echo  "pleae enter the time valve"
