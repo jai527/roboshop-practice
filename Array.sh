@@ -9,4 +9,6 @@ echo "${array_name[4]}"
 echo "${array_name[5]}"
 echo "${array_name[6]}"
 echo "${array_name[7]}"
-echo "all family members and joint family"
+
+array_name+=("jaswanth")
+echo "all are family members and joint family"
