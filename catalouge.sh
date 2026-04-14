@@ -46,7 +46,7 @@ VALIDATE "Download the application"
 cd /app 
 VALIDATE $? "Create app direcory"
 
-rm -rf /app
+rm -rf /app*
 VALIDATE $? "Removing the exit code"
 
 unzip /tmp/catalogue.zip
