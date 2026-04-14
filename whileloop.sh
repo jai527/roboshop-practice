@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "counting down:"
-while [ $counter -eq o ]; do
+while [ $counter -lt 10 ]; do
     echo "$counter"
-    (( "counter --" ))
+    (( "counter ++" ))
 done 
