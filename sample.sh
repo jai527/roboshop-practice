@@ -28,6 +28,6 @@ read a
 echo "enter b valve"
 read b
 
-hypotenuse=$((echo "sqrt{a^2 + b^2}"))
+hypotenuse=$((echo "scale=2" "sqrt{a^2 + b^2}"))
 
 echo "hypo valve: $hypotenuse"
