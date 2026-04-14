@@ -21,7 +21,7 @@ echo "length of array: ${#name_array[@]}"  #prient the number of elements in the
 
 #unset of array
 name_array=("jai" "kumar" "jai1")
-unset name_array[1]
+unset name_array[2]                   #delect the thired valve
 for element in "${name_array[@]}"
 do 
   echo "$element"
