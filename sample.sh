@@ -20,3 +20,14 @@ read s
 total_seconds=$((h * 3600 + m * 60 + s))
 
 echo "total seconds: $total_seconds"
+
+#hypotenuse finder
+
+echo "enter a valve"
+read a
+echo "enter b valve"
+read b
+
+hypotenuse=$((echo "sqrt{a^2 + b^2}"))
+
+echo "hypo valve: $hypotenuse"
