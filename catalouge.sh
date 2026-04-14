@@ -30,11 +30,33 @@ VALIDATE $? "Enabling nodejs"
 dnf install nodejs -y
 VALIDATE $? "Installing nodejs"
 
-useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop
-VALIDATE $? "Creating system user"
+id roboshop
+if [ $? -ne 0 ]; then
+    useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop
+    VALIDATE $? "Creating system user"
+else
+    echo -e "Roboshop user is alreday exit.....> $y SKIPPING $N"
 
-mkdir app/
+mkdir -p /app
 VALIDATE $? "Creating app directory"
 
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
 VALIDATE "Download the application"
+
+cd /app 
+VALIDATE $? "Create app direcory"
+
+rm -rf /app
+VALIDATE $? "Removing the exit code"
+
+unzip /tmp/catalogue.zip
+VALIDATE $? "Unzip the catalouge"
+
+npm install
+VALIDATE $? "npm installing"
+
+cp catalouge.service /etc/sytemd/system/catalouge.service
+VALIDATE $? "created systemctl service"
+
+
+ 
