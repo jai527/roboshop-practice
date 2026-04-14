@@ -4,7 +4,7 @@ counter=1
 echo "counting up":
 until [ $counter -gt 10 ] 
 do 
-   echo "$conter"
+   echo "$counter"
     (( counter++ ))
 
 done
