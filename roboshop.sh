@@ -33,4 +33,6 @@ do
         #RECORD_NAME="$instance.$DOMAIN_NAME" # mongodb.daws88s.online
     fi
 
-    Done
+
+
+done
