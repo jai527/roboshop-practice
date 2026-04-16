@@ -8,3 +8,4 @@ if [ $village_name -eq 0]; then
     echo "correct village"
 else
    echo "wrong village"
+fi
