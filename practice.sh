@@ -1,11 +1,11 @@
-#!/bin/bash
+echo "Enter village name:"
+read village_name
 
-echo "village name "
-read reply
-echo "street name"
+echo "Enter street name:"
 read street
-if [ $village_name -eq 0]; then
+
+if [ "$village_name" == "myvillage" ]; then
     echo "correct village"
 else
-   echo "wrong village"
+    echo "wrong village"
 fi
